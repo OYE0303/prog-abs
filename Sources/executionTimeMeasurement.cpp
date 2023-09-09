@@ -1,13 +1,7 @@
-// ExecutionTimeMeasurement.h
-
-#ifndef EXECUTION_TIME_MEASUREMENT_H
-#define EXECUTION_TIME_MEASUREMENT_H
-
 #include <iostream>
 #include <functional>
 #include <chrono>
 
-// Function to measure the execution time of another function
 template <typename Func, typename... Args>
 void measureExecutionTime(const Func& func, Args... args) {
     // Start the clock
@@ -26,5 +20,3 @@ void measureExecutionTime(const Func& func, Args... args) {
     // Print the execution time
     std::cout << "\033[1;34mExecution time: " << durationMicroSec.count() << " microseconds \033[0m\033[1;31m" << "/ " << durationSec.count() << " seconds\033[0m" << std::endl;
 }
-
-#endif // EXECUTION_TIME_MEASUREMENT_H

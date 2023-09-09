@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "../../ExecutionTimeMeasurement.h"
+#include "../../Headers/executionTimeMeasurement.h"
 using namespace std;
 
 /* divisorSum is a exhaustive algorithm
