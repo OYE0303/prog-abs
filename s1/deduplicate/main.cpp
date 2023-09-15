@@ -1,7 +1,5 @@
 #include <vector>
 #include "./Headers/printVector.h"
-#include "./Headers/split.h"
-#include "./Headers/isNumber.h"
 using namespace std;
 
 vector<string> removeAdjDup(vector<string>& vec){
