@@ -1,5 +1,5 @@
 #include <vector>
-#include "./Headers/printVector.h"
+#include "./../../Headers/printVector.h"
 using namespace std;
 
 vector<string> removeAdjDup(vector<string>& vec){
