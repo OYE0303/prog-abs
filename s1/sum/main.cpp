@@ -13,7 +13,7 @@ int main(){
   vector<string> lines;
   int result = 0;
 
-  myFile.open("Section1/SumNumbers/numbers.txt");
+  myFile.open("s1/sum/numbers.txt");
 
   if(!myFile.is_open()) {
     cout << "File can't open successfully" << endl;
