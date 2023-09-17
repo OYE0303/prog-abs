@@ -3,9 +3,10 @@
 #include "../../Headers/executionTimeMeasurement.h"
 using namespace std;
 
-/* divisorSum is a exhaustive algorithm
+/* 
+   divisorSum is a exhaustive algorithm
    loop throught from 1 ~ n
- */
+*/
 long divisorSum(long n) {
     long total = 0;
     for (long divisor = 1; divisor < n; divisor++) {
@@ -30,13 +31,10 @@ void findPerfects(long stop) {
     cout << endl << "Done searching up to " << stop << endl;
 }
 
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-
-/* smarterSum is a optimize algorithm
-   loop throught from 1 ~ n
- */
+/* 
+   smarterSum is a optimize algorithm
+   loop throught from 1 ~ sqrt(n)
+*/
 long smarterSum(long n) {
     long total = 0;
 
