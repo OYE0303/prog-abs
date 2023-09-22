@@ -3,14 +3,10 @@
 #include <unordered_map>
 using namespace std;
 
-unordered_map<char, char> matchingPairs = {
-  {'}', '{'}, 
-  {')', '('}, 
-  {']', '['}
-};
+unordered_map<char, char> matchingPairs = {{'}', '{'}, {')', '('}, {']', '['}};
 const string balancedChars = "({[)}]";
 
-bool checkBalance(string str){
+bool checkBalance(string str) {
   stack<char> sta;
 
   for (char c : str) {
@@ -32,7 +28,7 @@ bool checkBalance(string str){
 }
 
 int main() {
-  bool aa = checkBalance("if (x) {") ;
+  bool aa = checkBalance("if (x) {");
 
   cout << aa << endl;
 

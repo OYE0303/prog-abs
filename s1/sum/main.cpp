@@ -1,13 +1,13 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 #include <vector>
-#include "./../../Headers/split.h"
+
 #include "./../../Headers/isNumber.h"
+#include "./../../Headers/split.h"
 using namespace std;
 
-
-int main(){
+int main() {
   ifstream myFile;
   string line;
   vector<string> lines;
@@ -15,21 +15,21 @@ int main(){
 
   myFile.open("s1/sum/numbers.txt");
 
-  if(!myFile.is_open()) {
+  if (!myFile.is_open()) {
     cout << "File can't open successfully" << endl;
     return 1;
   }
 
-  while(myFile){
+  while (myFile) {
     getline(myFile, line);
     lines.push_back(line);
   }
 
-  for(string line : lines){
+  for (string line : lines) {
     vector<string> strs = split(line, " ");
 
-    for(string str : strs){
-      if(isNumber(str)) result += stoi(str);
+    for (string str : strs) {
+      if (isNumber(str)) result += stoi(str);
     }
   }
 

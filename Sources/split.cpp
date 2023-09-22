@@ -1,17 +1,17 @@
-#include <vector>
 #include <string>
+#include <vector>
 using namespace std;
 
 vector<string> split(string str, string delimiter) {
   vector<string> res;
   int startIdx = 0;
 
-  if(delimiter.length() >= str.length()) return res;
+  if (delimiter.length() >= str.length()) return res;
 
-  while(startIdx < str.length()){
+  while (startIdx < str.length()) {
     int findIdx = str.find(delimiter, startIdx);
 
-    if(findIdx == string::npos){
+    if (findIdx == string::npos) {
       break;
     }
 
@@ -20,7 +20,7 @@ vector<string> split(string str, string delimiter) {
     startIdx = findIdx + delimiter.length();
   }
 
-  if(startIdx != str.length()) {
+  if (startIdx != str.length()) {
     res.push_back(str.substr(startIdx));
   }
 
