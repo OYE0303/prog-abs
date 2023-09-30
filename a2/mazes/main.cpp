@@ -30,18 +30,15 @@ struct GridLocation {
   }
 };
 
+// Solves a maze.
+stack<GridLocation> solveMaze(vector<vector<bool>>& maze);
+
 // Generates all valid moves for a given current location in the maze.
 set<GridLocation> generateValidMoves(vector<vector<bool>>& maze,
                                      GridLocation cur);
 
-// Solves a maze.
-stack<GridLocation> solveMaze(vector<vector<bool>>& maze);
-
 // Validates a path through the maze.
 bool validatePath(vector<vector<bool>>& maze, stack<GridLocation> path);
-
-// Reads a maze file and stores the maze in a 2D vector.
-void readMazeFile(string filename, vector<vector<bool>>& maze);
 
 // Generates a maze from a file.
 vector<vector<bool>> generateMazeFromFile(string filename);
@@ -251,18 +248,6 @@ vector<vector<bool>> generateMazeFromFile(string fileName) {
   return maze;
 }
 
-void initializeMaze(vector<vector<bool>>& maze, int numRows, int numCols) {
-  for (int r = 0; r < numRows; r++) {
-    vector<bool> row;
-
-    for (int c = 0; c < numCols; c++) {
-      row.push_back(true);
-    }
-
-    maze.push_back(row);
-  }
-}
-
 std::stack<GridLocation> generateSolution(string fileName) {
   ifstream inputFile(fileName);
 
@@ -323,6 +308,18 @@ std::stack<GridLocation> generateSolution(string fileName) {
   }
 
   return result;
+}
+
+void initializeMaze(vector<vector<bool>>& maze, int numRows, int numCols) {
+  for (int r = 0; r < numRows; r++) {
+    vector<bool> row;
+
+    for (int c = 0; c < numCols; c++) {
+      row.push_back(true);
+    }
+
+    maze.push_back(row);
+  }
 }
 
 void printGridLocationStack(stack<GridLocation> s) {
